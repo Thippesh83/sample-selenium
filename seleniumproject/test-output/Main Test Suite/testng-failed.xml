@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Main Test Suite]" parallel="tests">
+  <parameter name="browser" value="internet explorer"/>
+  <test name="Grid IE Test(failed)" parallel="tests">
+    <parameter name="browser" value="internet explorer"/>
+    <classes>
+      <class name="seleniumgrid1.ParallelTestB">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- seleniumgrid1.ParallelTestB -->
+      <class name="seleniumgrid1.ParallelTestC">
+        <methods>
+          <include name="testGooglePageTitleInIE"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- seleniumgrid1.ParallelTestC -->
+      <class name="seleniumgrid1.ParallelTestA">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- seleniumgrid1.ParallelTestA -->
+    </classes>
+  </test> <!-- Grid IE Test(failed) -->
+</suite> <!-- Failed suite [Main Test Suite] -->
