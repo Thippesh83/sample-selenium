@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Main Test Suite" parallel="tests" verbose="1">
-	<test name="Grid firefox Test">
-		<parameter name="browser" value="firefox" />
-		<classes>
-			<class name="seleniumgrid1.ParallelTestA" />
-		</classes>
-	</test>
-	<test name="Grid chrome Test">
-		<parameter name="browser" value="chrome" />
-		<classes>
-			<class name="seleniumgrid1.ParallelTestB" />
-		</classes>
-	</test>
-	
-	<test name="Grid IE Test">
-		<parameter name="browser" value="internet explorer" />
-		<classes>
-			<class name="seleniumgrid1.ParallelTestC" />
-		</classes>
-	</test>
-</suite>
+<suite name="Suite" parallel="false">
+  <test name="Test">
+    <classes>
+      <class name="seleniumgrid1.AccessGoogleLanguageLinks"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
