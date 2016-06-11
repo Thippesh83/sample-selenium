@@ -7,7 +7,7 @@
     <property environment="env"/>
 	
     <property name="ws.home" value="${basedir}"/>
-	<property name="ws.jars" value="C:/jars_may24"/>
+	<property name="ws.jars" value="C:/Jars"/>
     <property name="test.dest" value="${ws.home}/build"/>
     <property name="test.src" value="${ws.home}/src"/>
 	<property name="ng.result" value="${ws.home}/test-output"/>
@@ -74,7 +74,7 @@
             debug="true" 
             destdir="${test.dest}" 
             srcdir="${test.src}" 
-            target="1.6" 
+            target="1.7" 
             classpath="${test.classpath}">
         </javac>
       </target>
@@ -95,7 +95,7 @@
 	<target name="run" depends="compile">  
 		
 		<testng classpath="${test.classpath}:${test.dest}" suitename="Suite">
-		  <xmlfileset dir="${ws.home}" includes="testngSuite.xml"/> 
+		  <xmlfileset dir="${ws.home}" includes="testng.xml"/> 
 		</testng>
 	 
 

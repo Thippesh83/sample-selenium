@@ -7,13 +7,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 		public class AccessGoogleLanguageLinks {
-	
-			public static void main(String[] args)  {
-
-
-		WebDriver driver = new FirefoxDriver();
+		WebDriver	driver;
+			
+		@Test
+		public void accessGoogleLanguageLinks() throws InterruptedException {
+	    driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
 		//Thread.sleep(10000);
 		driver.findElement(By.xpath("//*[@id='_eEe']/a[7]")).click();
@@ -25,6 +26,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 			element = it.next();
 			System.out.println(element.getAttribute("href")+"   "+element.getText());
 		}
+		driver.close();
 		
 		
 	}
